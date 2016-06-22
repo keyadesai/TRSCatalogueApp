@@ -1,0 +1,26 @@
+<ion-view view-title="Inspirations">
+  <ion-content class="padding">
+    <ion-list ng-repeat="inspiration in inspirations">
+
+    <ion-item
+        class="item-remove-animate inspiration-item"
+        type="item-text-wrap"  href="#" 
+        onclick="window.open('http://savvy.rejectshop.com.au', '_system', 'location=yes'); return false;">
+        <div class="list card">
+  <div class="item item-body">
+    <img class="full-image" src="{{inspiration.image}}">
+    <h2>{{inspiration.title}}</h2>
+    <p>
+      {{inspiration.description}}
+    </p>
+       <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+</div>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

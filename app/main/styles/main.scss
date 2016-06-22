@@ -1,0 +1,132 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #BF0D0D !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+
+// The path for our ionicons font files, relative to the built & temporary main.css
+$ionicons-font-path: "../assets/fonts" !default;
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+// Include all of Ionic
+@import "../../bower_components/ionic/scss/ionic";
+
+.bar.bar-assertive{
+    border-bottom: 2px solid #F5D402 !important;
+}
+
+
+.tab-nav {
+  border-top: 2px solid #F5D402 !important;
+}
+
+.rating {
+	.icon {
+	right: auto;
+    left: auto;
+    top: 10px;
+	}
+}
+
+ .bar.bar-assertive .title {
+     color: #F5D402;
+ }
+
+ .tabs-assertive > .tabs, .tabs.tabs-assertive {
+   color:#F5D402;
+}
+
+.product-full-img {
+	margin:0 auto;
+      max-width: 244px !important;
+      max-height: 244px !important;
+}
+
+.item h2 {
+font-size:20px;
+white-space:pre-wrap;
+}
+
+.item h3 {
+	white-space:pre-wrap;
+}
+
+.inspiration-item .item-content {
+	padding-right: 16px;
+}
+
+.badge1 {
+   position:relative;
+}
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-10px;
+   right:-320px;
+   font-size:13px;
+   background:#BF0D0D;
+   color:#F5D402;
+   width:40px;height:40px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+.bar.bar-header .button+.title{
+  text-align:center;
+  left:0;
+}
+
+.overlay {
+  position: absolute;
+    top: -2px;
+    right: 250px;
+    text-align: center;
+    z-index: 9999;
+}
+
+
+.left-text {
+  display:inline-block; 
+  text-align:center; 
+  padding: 1% 0 0 12%;
+  font-size:210x;
+  color:#BF0D0D;
+  //text-shadow: -1px 0 #BF0D0D, 0 1px #BF0D0D, 1px 0 #BF0D0D, 0 -1px #BF0D0D;
+
+}
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-10deg);
+
+/* Firefox */
+-moz-transform: rotate(-10deg);
+
+/* IE */
+-ms-transform: rotate(-10deg);
+
+/* Opera */
+-o-transform: rotate(-10deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}

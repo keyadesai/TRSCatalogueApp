@@ -1,0 +1,42 @@
+<ion-view view-title="Catalogue">
+    <ion-content>
+       <ion-list>
+      <ion-item
+        ng-repeat="offer in offers"
+        class="item-remove-animate"
+        type="item-text-wrap"
+       style="text-align: center">
+
+<div class="card" style="box-shadow: 0 0 0 0;border-bottom:2px solid #ccc;margin:0 0;">
+  <div class="item item-text-wrap" style="padding:0">
+    <img src="{{offer.OfferImage}}" style="box-shadow: 0 0 0 0;"/>
+
+    <div style="height: 40px">
+    <span style="float: left; padding: 1% 2% 2% 10%" ng-click=addToFavorite(offer)><i class="icon ion-heart icon-accessory" style="font-size: 30px;color:#BF0D0D"></i>
+    </span>
+      <span ng-if="offer.Price < 3" ng-click="showNotificationPopup()" style="display:inline-block; text-align:center; padding: 1% 0 0 30%"><i class="icon ion-android-notifications icon-accessory" style="font-size: 30px;color:#BF0D0D"></i>
+    </span>
+    <span ng-if="offer.Price >= 3"
+     style="font-border:red;font-weight: bolder; font-style: italic;" class="left-text">
+     <i class="icon ion-alert-circled" style="font-size: 20px;color:#BF0D0D;margin-right:5px;"></i>Only {{random + $index}} Left
+    </span>
+    <span style="float: right; padding: 1% 10% 2% 2%"><i class="icon ion-android-share icon-accessory" 
+    ng-click="showSharePopup()" style="font-size: 30px;color:#BF0D0D;"></i></span>
+    </div>
+  </div>
+    <div class="item row" style="text-align: center;padding: 0;">
+    <div class="col col-100" style="margin-bottom:7px;">
+     <div style="margin-bottom:7px;"> {{offer.OfferTitle}}</div>
+    <h2>{{offer.OfferDisplayPrice}}</h2>
+    </div>
+
+  </div>
+</div>
+ 
+
+      </ion-item>
+    </ion-content>
+
+    
+
+</ion-view>
